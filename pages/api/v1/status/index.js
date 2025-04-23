@@ -20,8 +20,6 @@ async function status(request, response) {
   const dataBaseOpenedConnectionsValue =
     dataBaseOpenedConnectionsResult.rows[0].count;
 
-  console.log(dataBaseOpenedConnectionsValue);
-
   response.status(200).json({
     updated_at: updatedAt,
     dependencies: {
