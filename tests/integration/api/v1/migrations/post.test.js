@@ -18,7 +18,6 @@ describe("POST api/v1/migrations", () => {
         expect(response1.status).toBe(201);
 
         const response1Body = await response1.json();
-
         expect(Array.isArray(response1Body)).toBe(true);
         expect(response1Body[0].path).toContain("infra/migration");
         expect(response1Body.length).toBeGreaterThan(0);
